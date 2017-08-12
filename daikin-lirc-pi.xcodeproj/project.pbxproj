@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4591E8D51F3F7002008D1BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */; };
+		4591E8D71F3F7002008D1BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8D61F3F7002008D1BB5 /* ViewController.swift */; };
+		4591E8DA1F3F7002008D1BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591E8D81F3F7002008D1BB5 /* Main.storyboard */; };
+		4591E8DC1F3F7002008D1BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4591E8DB1F3F7002008D1BB5 /* Assets.xcassets */; };
+		4591E8DF1F3F7002008D1BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591E8DD1F3F7002008D1BB5 /* LaunchScreen.storyboard */; };
+		4591E8EA1F3F7002008D1BB5 /* daikin_lirc_piTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8E91F3F7002008D1BB5 /* daikin_lirc_piTests.swift */; };
+		4591E8F51F3F7002008D1BB5 /* daikin_lirc_piUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8F41F3F7002008D1BB5 /* daikin_lirc_piUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4591E8E61F3F7002008D1BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4591E8C91F3F7002008D1BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4591E8D01F3F7002008D1BB5;
+			remoteInfo = "daikin-lirc-pi";
+		};
+		4591E8F11F3F7002008D1BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4591E8C91F3F7002008D1BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4591E8D01F3F7002008D1BB5;
+			remoteInfo = "daikin-lirc-pi";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4591E8D11F3F7002008D1BB5 /* daikin-lirc-pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daikin-lirc-pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4591E8D61F3F7002008D1BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4591E8D91F3F7002008D1BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4591E8DB1F3F7002008D1BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4591E8DE1F3F7002008D1BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4591E8E01F3F7002008D1BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4591E8E51F3F7002008D1BB5 /* daikin-lirc-piTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "daikin-lirc-piTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4591E8E91F3F7002008D1BB5 /* daikin_lirc_piTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daikin_lirc_piTests.swift; sourceTree = "<group>"; };
+		4591E8EB1F3F7002008D1BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "daikin-lirc-piUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4591E8F41F3F7002008D1BB5 /* daikin_lirc_piUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daikin_lirc_piUITests.swift; sourceTree = "<group>"; };
+		4591E8F61F3F7002008D1BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4591E8CE1F3F7002008D1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8E21F3F7002008D1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8ED1F3F7002008D1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4591E8C81F3F7002008D1BB5 = {
+			isa = PBXGroup;
+			children = (
+				4591E8D31F3F7002008D1BB5 /* daikin-lirc-pi */,
+				4591E8E81F3F7002008D1BB5 /* daikin-lirc-piTests */,
+				4591E8F31F3F7002008D1BB5 /* daikin-lirc-piUITests */,
+				4591E8D21F3F7002008D1BB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4591E8D21F3F7002008D1BB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4591E8D11F3F7002008D1BB5 /* daikin-lirc-pi.app */,
+				4591E8E51F3F7002008D1BB5 /* daikin-lirc-piTests.xctest */,
+				4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4591E8D31F3F7002008D1BB5 /* daikin-lirc-pi */ = {
+			isa = PBXGroup;
+			children = (
+				4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */,
+				4591E8D61F3F7002008D1BB5 /* ViewController.swift */,
+				4591E8D81F3F7002008D1BB5 /* Main.storyboard */,
+				4591E8DB1F3F7002008D1BB5 /* Assets.xcassets */,
+				4591E8DD1F3F7002008D1BB5 /* LaunchScreen.storyboard */,
+				4591E8E01F3F7002008D1BB5 /* Info.plist */,
+			);
+			path = "daikin-lirc-pi";
+			sourceTree = "<group>";
+		};
+		4591E8E81F3F7002008D1BB5 /* daikin-lirc-piTests */ = {
+			isa = PBXGroup;
+			children = (
+				4591E8E91F3F7002008D1BB5 /* daikin_lirc_piTests.swift */,
+				4591E8EB1F3F7002008D1BB5 /* Info.plist */,
+			);
+			path = "daikin-lirc-piTests";
+			sourceTree = "<group>";
+		};
+		4591E8F31F3F7002008D1BB5 /* daikin-lirc-piUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4591E8F41F3F7002008D1BB5 /* daikin_lirc_piUITests.swift */,
+				4591E8F61F3F7002008D1BB5 /* Info.plist */,
+			);
+			path = "daikin-lirc-piUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4591E8F91F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-pi" */;
+			buildPhases = (
+				4591E8CD1F3F7002008D1BB5 /* Sources */,
+				4591E8CE1F3F7002008D1BB5 /* Frameworks */,
+				4591E8CF1F3F7002008D1BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "daikin-lirc-pi";
+			productName = "daikin-lirc-pi";
+			productReference = 4591E8D11F3F7002008D1BB5 /* daikin-lirc-pi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4591E8E41F3F7002008D1BB5 /* daikin-lirc-piTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4591E8FC1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piTests" */;
+			buildPhases = (
+				4591E8E11F3F7002008D1BB5 /* Sources */,
+				4591E8E21F3F7002008D1BB5 /* Frameworks */,
+				4591E8E31F3F7002008D1BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4591E8E71F3F7002008D1BB5 /* PBXTargetDependency */,
+			);
+			name = "daikin-lirc-piTests";
+			productName = "daikin-lirc-piTests";
+			productReference = 4591E8E51F3F7002008D1BB5 /* daikin-lirc-piTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4591E8EF1F3F7002008D1BB5 /* daikin-lirc-piUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4591E8FF1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piUITests" */;
+			buildPhases = (
+				4591E8EC1F3F7002008D1BB5 /* Sources */,
+				4591E8ED1F3F7002008D1BB5 /* Frameworks */,
+				4591E8EE1F3F7002008D1BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4591E8F21F3F7002008D1BB5 /* PBXTargetDependency */,
+			);
+			name = "daikin-lirc-piUITests";
+			productName = "daikin-lirc-piUITests";
+			productReference = 4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4591E8C91F3F7002008D1BB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Dang Duong Hung";
+				TargetAttributes = {
+					4591E8D01F3F7002008D1BB5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EJ4KJWT3MT;
+						ProvisioningStyle = Automatic;
+					};
+					4591E8E41F3F7002008D1BB5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EJ4KJWT3MT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4591E8D01F3F7002008D1BB5;
+					};
+					4591E8EF1F3F7002008D1BB5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EJ4KJWT3MT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4591E8D01F3F7002008D1BB5;
+					};
+				};
+			};
+			buildConfigurationList = 4591E8CC1F3F7002008D1BB5 /* Build configuration list for PBXProject "daikin-lirc-pi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4591E8C81F3F7002008D1BB5;
+			productRefGroup = 4591E8D21F3F7002008D1BB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */,
+				4591E8E41F3F7002008D1BB5 /* daikin-lirc-piTests */,
+				4591E8EF1F3F7002008D1BB5 /* daikin-lirc-piUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4591E8CF1F3F7002008D1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4591E8DF1F3F7002008D1BB5 /* LaunchScreen.storyboard in Resources */,
+				4591E8DC1F3F7002008D1BB5 /* Assets.xcassets in Resources */,
+				4591E8DA1F3F7002008D1BB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8E31F3F7002008D1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8EE1F3F7002008D1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4591E8CD1F3F7002008D1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4591E8D71F3F7002008D1BB5 /* ViewController.swift in Sources */,
+				4591E8D51F3F7002008D1BB5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8E11F3F7002008D1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4591E8EA1F3F7002008D1BB5 /* daikin_lirc_piTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E8EC1F3F7002008D1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4591E8F51F3F7002008D1BB5 /* daikin_lirc_piUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4591E8E71F3F7002008D1BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */;
+			targetProxy = 4591E8E61F3F7002008D1BB5 /* PBXContainerItemProxy */;
+		};
+		4591E8F21F3F7002008D1BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */;
+			targetProxy = 4591E8F11F3F7002008D1BB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4591E8D81F3F7002008D1BB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4591E8D91F3F7002008D1BB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4591E8DD1F3F7002008D1BB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4591E8DE1F3F7002008D1BB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4591E8F71F3F7002008D1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4591E8F81F3F7002008D1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4591E8FA1F3F7002008D1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-pi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-pi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4591E8FB1F3F7002008D1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-pi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-pi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4591E8FD1F3F7002008D1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-piTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-piTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/daikin-lirc-pi.app/daikin-lirc-pi";
+			};
+			name = Debug;
+		};
+		4591E8FE1F3F7002008D1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-piTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-piTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/daikin-lirc-pi.app/daikin-lirc-pi";
+			};
+			name = Release;
+		};
+		4591E9001F3F7002008D1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-piUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-piUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "daikin-lirc-pi";
+			};
+			name = Debug;
+		};
+		4591E9011F3F7002008D1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				INFOPLIST_FILE = "daikin-lirc-piUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-piUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "daikin-lirc-pi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4591E8CC1F3F7002008D1BB5 /* Build configuration list for PBXProject "daikin-lirc-pi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4591E8F71F3F7002008D1BB5 /* Debug */,
+				4591E8F81F3F7002008D1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4591E8F91F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-pi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4591E8FA1F3F7002008D1BB5 /* Debug */,
+				4591E8FB1F3F7002008D1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4591E8FC1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4591E8FD1F3F7002008D1BB5 /* Debug */,
+				4591E8FE1F3F7002008D1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4591E8FF1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4591E9001F3F7002008D1BB5 /* Debug */,
+				4591E9011F3F7002008D1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4591E8C91F3F7002008D1BB5 /* Project object */;
+}
