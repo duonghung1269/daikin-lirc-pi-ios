@@ -11,7 +11,7 @@ import Alamofire
 
 public class API {
     
-    public static let baseURL: String = "http://localhost:3000"
+    public static let baseURL: String = "http://192.168.0.133:3000"
     
     enum BackendError: Error {
         case objectSerialization(reason: String)
@@ -29,7 +29,7 @@ public class API {
         
         public var path: String {
             switch self {
-            case .UpdateStates(let _):
+            case .UpdateStates( _):
                 return baseURL + "/remote/powerOn"
             }
         }

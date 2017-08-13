@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>daikin-lirc-pi-SiriIntent.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>daikin-lirc-pi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>4591E8EF1F3F7002008D1BB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4591E91C1F408AA9008D1BB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,6 +20,8 @@
 		4591E9061F3F7DCC008D1BB5 /* DaikinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E9051F3F7DCC008D1BB5 /* DaikinService.swift */; };
 		4591E9091F3F7E1C008D1BB5 /* DaikinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E9081F3F7E1C008D1BB5 /* DaikinModel.swift */; };
 		4591E90B1F3F7F4B008D1BB5 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E90A1F3F7F4B008D1BB5 /* ResponseModel.swift */; };
+		4591E9201F408AAA008D1BB5 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E91F1F408AAA008D1BB5 /* IntentHandler.swift */; };
+		4591E9241F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4591E91D1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FEB6C17D26A02B44C74F924D /* Pods_daikin_lirc_pi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186D724EFB61CBFF64808AAD /* Pods_daikin_lirc_pi.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,28 @@
 			remoteGlobalIDString = 4591E8D01F3F7002008D1BB5;
 			remoteInfo = "daikin-lirc-pi";
 		};
+		4591E9221F408AAA008D1BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4591E8C91F3F7002008D1BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4591E91C1F408AA9008D1BB5;
+			remoteInfo = "daikin-lirc-pi-SiriIntent";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4591E9281F408AAA008D1BB5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4591E9241F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		186D724EFB61CBFF64808AAD /* Pods_daikin_lirc_pi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daikin_lirc_pi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +84,10 @@
 		4591E9051F3F7DCC008D1BB5 /* DaikinService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikinService.swift; sourceTree = "<group>"; };
 		4591E9081F3F7E1C008D1BB5 /* DaikinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikinModel.swift; sourceTree = "<group>"; };
 		4591E90A1F3F7F4B008D1BB5 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		4591E91D1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "daikin-lirc-pi-SiriIntent.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4591E91F1F408AAA008D1BB5 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		4591E9211F408AAA008D1BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4591E9291F408F03008D1BB5 /* daikin-lirc-pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "daikin-lirc-pi.entitlements"; sourceTree = "<group>"; };
 		61F6C94D8CC5D447BC5AE2A9 /* Pods-daikin-lirc-pi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-pi.release.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-pi/Pods-daikin-lirc-pi.release.xcconfig"; sourceTree = "<group>"; };
 		699076C93EB8407CCA1EC3BB /* Pods-daikin-lirc-piUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-piUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-piUITests/Pods-daikin-lirc-piUITests.release.xcconfig"; sourceTree = "<group>"; };
 		796392F4A63D5C53CBA0CB2B /* Pods_daikin_lirc_piTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daikin_lirc_piTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +121,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4591E91A1F408AA9008D1BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +137,7 @@
 				4591E8D31F3F7002008D1BB5 /* daikin-lirc-pi */,
 				4591E8E81F3F7002008D1BB5 /* daikin-lirc-piTests */,
 				4591E8F31F3F7002008D1BB5 /* daikin-lirc-piUITests */,
+				4591E91E1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent */,
 				4591E8D21F3F7002008D1BB5 /* Products */,
 				F526B497F4D7842AB3CB6B2C /* Pods */,
 				5310D5483465CF77EBCF4DB2 /* Frameworks */,
@@ -115,6 +150,7 @@
 				4591E8D11F3F7002008D1BB5 /* daikin-lirc-pi.app */,
 				4591E8E51F3F7002008D1BB5 /* daikin-lirc-piTests.xctest */,
 				4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */,
+				4591E91D1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +158,7 @@
 		4591E8D31F3F7002008D1BB5 /* daikin-lirc-pi */ = {
 			isa = PBXGroup;
 			children = (
+				4591E9291F408F03008D1BB5 /* daikin-lirc-pi.entitlements */,
 				4591E9071F3F7E11008D1BB5 /* Model */,
 				4591E9021F3F7C4F008D1BB5 /* Service */,
 				4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */,
@@ -170,6 +207,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		4591E91E1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent */ = {
+			isa = PBXGroup;
+			children = (
+				4591E91F1F408AAA008D1BB5 /* IntentHandler.swift */,
+				4591E9211F408AAA008D1BB5 /* Info.plist */,
+			);
+			path = "daikin-lirc-pi-SiriIntent";
+			sourceTree = "<group>";
+		};
 		5310D5483465CF77EBCF4DB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,10 +252,12 @@
 				4591E8CF1F3F7002008D1BB5 /* Resources */,
 				66A41CA24D5439544BF86EB6 /* [CP] Embed Pods Frameworks */,
 				0BB005C204C206307DE42C6D /* [CP] Copy Pods Resources */,
+				4591E9281F408AAA008D1BB5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4591E9231F408AAA008D1BB5 /* PBXTargetDependency */,
 			);
 			name = "daikin-lirc-pi";
 			productName = "daikin-lirc-pi";
@@ -258,6 +306,23 @@
 			productReference = 4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4591E91C1F408AA9008D1BB5 /* daikin-lirc-pi-SiriIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4591E9271F408AAA008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-pi-SiriIntent" */;
+			buildPhases = (
+				4591E9191F408AA9008D1BB5 /* Sources */,
+				4591E91A1F408AA9008D1BB5 /* Frameworks */,
+				4591E91B1F408AA9008D1BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "daikin-lirc-pi-SiriIntent";
+			productName = "daikin-lirc-pi-SiriIntent";
+			productReference = 4591E91D1F408AAA008D1BB5 /* daikin-lirc-pi-SiriIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -270,8 +335,13 @@
 				TargetAttributes = {
 					4591E8D01F3F7002008D1BB5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = EJ4KJWT3MT;
+						DevelopmentTeam = 5QPTZB3728;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					4591E8E41F3F7002008D1BB5 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -284,6 +354,11 @@
 						DevelopmentTeam = EJ4KJWT3MT;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4591E8D01F3F7002008D1BB5;
+					};
+					4591E91C1F408AA9008D1BB5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5QPTZB3728;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -303,6 +378,7 @@
 				4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */,
 				4591E8E41F3F7002008D1BB5 /* daikin-lirc-piTests */,
 				4591E8EF1F3F7002008D1BB5 /* daikin-lirc-piUITests */,
+				4591E91C1F408AA9008D1BB5 /* daikin-lirc-pi-SiriIntent */,
 			);
 		};
 /* End PBXProject section */
@@ -326,6 +402,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4591E8EE1F3F7002008D1BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4591E91B1F408AA9008D1BB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,6 +585,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4591E9191F408AA9008D1BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4591E9201F408AAA008D1BB5 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -514,6 +605,11 @@
 			isa = PBXTargetDependency;
 			target = 4591E8D01F3F7002008D1BB5 /* daikin-lirc-pi */;
 			targetProxy = 4591E8F11F3F7002008D1BB5 /* PBXContainerItemProxy */;
+		};
+		4591E9231F408AAA008D1BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4591E91C1F408AA9008D1BB5 /* daikin-lirc-pi-SiriIntent */;
+			targetProxy = 4591E9221F408AAA008D1BB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -636,11 +732,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFDC4E1AFA592267B0E8F1DB /* Pods-daikin-lirc-pi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				CODE_SIGN_ENTITLEMENTS = "daikin-lirc-pi/daikin-lirc-pi.entitlements";
+				DEVELOPMENT_TEAM = 5QPTZB3728;
 				INFOPLIST_FILE = "daikin-lirc-pi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-pi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.am.siri.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -650,11 +748,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61F6C94D8CC5D447BC5AE2A9 /* Pods-daikin-lirc-pi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EJ4KJWT3MT;
+				CODE_SIGN_ENTITLEMENTS = "daikin-lirc-pi/daikin-lirc-pi.entitlements";
+				DEVELOPMENT_TEAM = 5QPTZB3728;
 				INFOPLIST_FILE = "daikin-lirc-pi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duonghung1269.daikin-lirc-pi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.am.siri.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -722,6 +822,32 @@
 			};
 			name = Release;
 		};
+		4591E9251F408AAA008D1BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5QPTZB3728;
+				INFOPLIST_FILE = "daikin-lirc-pi-SiriIntent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.am.siri.test.intent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4591E9261F408AAA008D1BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5QPTZB3728;
+				INFOPLIST_FILE = "daikin-lirc-pi-SiriIntent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.am.siri.test.intent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -760,6 +886,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4591E9271F408AAA008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-pi-SiriIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4591E9251F408AAA008D1BB5 /* Debug */,
+				4591E9261F408AAA008D1BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

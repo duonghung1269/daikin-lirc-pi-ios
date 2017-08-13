@@ -8,6 +8,7 @@
 
 import UIKit
 import MTCircularSlider
+import Intents
 
 class ViewController: UIViewController {
     @IBOutlet weak var SwitchPower: UISwitch!
@@ -28,11 +29,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        INPreferences.requestSiriAuthorization { (status) in
+            
+        }
+        
+        INVocabulary.shared().setVocabularyStrings(["push up", "sit up", "pull up"], of: .workoutActivityName)
+
+        
         _daikinModel = initStates()        
         SliderFan.isContinuous = false;
-            
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appDidBecomeActive), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+            }
+    
+    func appDidBecomeActive() {
+        if (AppDelegate.intentStart == nil) {
+            return
+        } else if (AppDelegate.intentStart == true) {
+            SwitchPower.setOn(true, animated: true)
+            SwitchPowerValueChanged(SwitchPower);
+            AppDelegate.intentStart = nil
+        } else {
+            SwitchPower.setOn(false, animated: true)
+            SwitchPowerValueChanged(SwitchPower);
+            AppDelegate.intentStart = nil
+        }
+
+    }
+    
     @IBAction func SwitchPowerValueChanged(_ sender: Any) {
         _daikinModel.state = SwitchPower.isOn
         updateRemoteStates()
