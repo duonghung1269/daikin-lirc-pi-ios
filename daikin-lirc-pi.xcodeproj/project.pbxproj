@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36929AB4E26FB1E32B52EAD5 /* Pods_daikin_lirc_piTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796392F4A63D5C53CBA0CB2B /* Pods_daikin_lirc_piTests.framework */; };
+		3D1939EBB3BA8EEE1F092ABC /* Pods_daikin_lirc_piUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90B42D763540AE102451854 /* Pods_daikin_lirc_piUITests.framework */; };
 		4591E8D51F3F7002008D1BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */; };
 		4591E8D71F3F7002008D1BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8D61F3F7002008D1BB5 /* ViewController.swift */; };
 		4591E8DA1F3F7002008D1BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591E8D81F3F7002008D1BB5 /* Main.storyboard */; };
@@ -14,6 +16,11 @@
 		4591E8DF1F3F7002008D1BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4591E8DD1F3F7002008D1BB5 /* LaunchScreen.storyboard */; };
 		4591E8EA1F3F7002008D1BB5 /* daikin_lirc_piTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8E91F3F7002008D1BB5 /* daikin_lirc_piTests.swift */; };
 		4591E8F51F3F7002008D1BB5 /* daikin_lirc_piUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E8F41F3F7002008D1BB5 /* daikin_lirc_piUITests.swift */; };
+		4591E9041F3F7C65008D1BB5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E9031F3F7C65008D1BB5 /* API.swift */; };
+		4591E9061F3F7DCC008D1BB5 /* DaikinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E9051F3F7DCC008D1BB5 /* DaikinService.swift */; };
+		4591E9091F3F7E1C008D1BB5 /* DaikinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E9081F3F7E1C008D1BB5 /* DaikinModel.swift */; };
+		4591E90B1F3F7F4B008D1BB5 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E90A1F3F7F4B008D1BB5 /* ResponseModel.swift */; };
+		FEB6C17D26A02B44C74F924D /* Pods_daikin_lirc_pi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186D724EFB61CBFF64808AAD /* Pods_daikin_lirc_pi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186D724EFB61CBFF64808AAD /* Pods_daikin_lirc_pi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daikin_lirc_pi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		213E1290DAD4DDD3F1D3D1A2 /* Pods-daikin-lirc-piUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-piUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-piUITests/Pods-daikin-lirc-piUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DF02899AD2D307453B9EA3F /* Pods-daikin-lirc-piTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-piTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-piTests/Pods-daikin-lirc-piTests.release.xcconfig"; sourceTree = "<group>"; };
 		4591E8D11F3F7002008D1BB5 /* daikin-lirc-pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daikin-lirc-pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4591E8D61F3F7002008D1BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,16 @@
 		4591E8F01F3F7002008D1BB5 /* daikin-lirc-piUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "daikin-lirc-piUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4591E8F41F3F7002008D1BB5 /* daikin_lirc_piUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = daikin_lirc_piUITests.swift; sourceTree = "<group>"; };
 		4591E8F61F3F7002008D1BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4591E9031F3F7C65008D1BB5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4591E9051F3F7DCC008D1BB5 /* DaikinService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikinService.swift; sourceTree = "<group>"; };
+		4591E9081F3F7E1C008D1BB5 /* DaikinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikinModel.swift; sourceTree = "<group>"; };
+		4591E90A1F3F7F4B008D1BB5 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		61F6C94D8CC5D447BC5AE2A9 /* Pods-daikin-lirc-pi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-pi.release.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-pi/Pods-daikin-lirc-pi.release.xcconfig"; sourceTree = "<group>"; };
+		699076C93EB8407CCA1EC3BB /* Pods-daikin-lirc-piUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-piUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-piUITests/Pods-daikin-lirc-piUITests.release.xcconfig"; sourceTree = "<group>"; };
+		796392F4A63D5C53CBA0CB2B /* Pods_daikin_lirc_piTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daikin_lirc_piTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFDC4E1AFA592267B0E8F1DB /* Pods-daikin-lirc-pi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-pi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-pi/Pods-daikin-lirc-pi.debug.xcconfig"; sourceTree = "<group>"; };
+		E90B42D763540AE102451854 /* Pods_daikin_lirc_piUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daikin_lirc_piUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE701A8A1DECC3F08BB6E698 /* Pods-daikin-lirc-piTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daikin-lirc-piTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daikin-lirc-piTests/Pods-daikin-lirc-piTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB6C17D26A02B44C74F924D /* Pods_daikin_lirc_pi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36929AB4E26FB1E32B52EAD5 /* Pods_daikin_lirc_piTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1939EBB3BA8EEE1F092ABC /* Pods_daikin_lirc_piUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 				4591E8E81F3F7002008D1BB5 /* daikin-lirc-piTests */,
 				4591E8F31F3F7002008D1BB5 /* daikin-lirc-piUITests */,
 				4591E8D21F3F7002008D1BB5 /* Products */,
+				F526B497F4D7842AB3CB6B2C /* Pods */,
+				5310D5483465CF77EBCF4DB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +122,8 @@
 		4591E8D31F3F7002008D1BB5 /* daikin-lirc-pi */ = {
 			isa = PBXGroup;
 			children = (
+				4591E9071F3F7E11008D1BB5 /* Model */,
+				4591E9021F3F7C4F008D1BB5 /* Service */,
 				4591E8D41F3F7002008D1BB5 /* AppDelegate.swift */,
 				4591E8D61F3F7002008D1BB5 /* ViewController.swift */,
 				4591E8D81F3F7002008D1BB5 /* Main.storyboard */,
@@ -125,6 +152,47 @@
 			path = "daikin-lirc-piUITests";
 			sourceTree = "<group>";
 		};
+		4591E9021F3F7C4F008D1BB5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4591E9031F3F7C65008D1BB5 /* API.swift */,
+				4591E9051F3F7DCC008D1BB5 /* DaikinService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		4591E9071F3F7E11008D1BB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4591E9081F3F7E1C008D1BB5 /* DaikinModel.swift */,
+				4591E90A1F3F7F4B008D1BB5 /* ResponseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5310D5483465CF77EBCF4DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				186D724EFB61CBFF64808AAD /* Pods_daikin_lirc_pi.framework */,
+				796392F4A63D5C53CBA0CB2B /* Pods_daikin_lirc_piTests.framework */,
+				E90B42D763540AE102451854 /* Pods_daikin_lirc_piUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F526B497F4D7842AB3CB6B2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC4E1AFA592267B0E8F1DB /* Pods-daikin-lirc-pi.debug.xcconfig */,
+				61F6C94D8CC5D447BC5AE2A9 /* Pods-daikin-lirc-pi.release.xcconfig */,
+				FE701A8A1DECC3F08BB6E698 /* Pods-daikin-lirc-piTests.debug.xcconfig */,
+				3DF02899AD2D307453B9EA3F /* Pods-daikin-lirc-piTests.release.xcconfig */,
+				213E1290DAD4DDD3F1D3D1A2 /* Pods-daikin-lirc-piUITests.debug.xcconfig */,
+				699076C93EB8407CCA1EC3BB /* Pods-daikin-lirc-piUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4591E8F91F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-pi" */;
 			buildPhases = (
+				8C1CD4959DD0FB18C222D543 /* [CP] Check Pods Manifest.lock */,
 				4591E8CD1F3F7002008D1BB5 /* Sources */,
 				4591E8CE1F3F7002008D1BB5 /* Frameworks */,
 				4591E8CF1F3F7002008D1BB5 /* Resources */,
+				66A41CA24D5439544BF86EB6 /* [CP] Embed Pods Frameworks */,
+				0BB005C204C206307DE42C6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4591E8FC1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piTests" */;
 			buildPhases = (
+				47FB067B9E2E7766FFCEF8A9 /* [CP] Check Pods Manifest.lock */,
 				4591E8E11F3F7002008D1BB5 /* Sources */,
 				4591E8E21F3F7002008D1BB5 /* Frameworks */,
 				4591E8E31F3F7002008D1BB5 /* Resources */,
+				21060EB1CB6D09DC560D1AF9 /* [CP] Embed Pods Frameworks */,
+				C3189789BF8354FAB920A023 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4591E8FF1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piUITests" */;
 			buildPhases = (
+				17153278293FAD5141B20FA2 /* [CP] Check Pods Manifest.lock */,
 				4591E8EC1F3F7002008D1BB5 /* Sources */,
 				4591E8ED1F3F7002008D1BB5 /* Frameworks */,
 				4591E8EE1F3F7002008D1BB5 /* Resources */,
+				96D067EC32FD3321FB87BF1F /* [CP] Embed Pods Frameworks */,
+				3E714725D96264FA93D9CF58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +334,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BB005C204C206307DE42C6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-pi/Pods-daikin-lirc-pi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17153278293FAD5141B20FA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		21060EB1CB6D09DC560D1AF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-piTests/Pods-daikin-lirc-piTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E714725D96264FA93D9CF58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-piUITests/Pods-daikin-lirc-piUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47FB067B9E2E7766FFCEF8A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66A41CA24D5439544BF86EB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-pi/Pods-daikin-lirc-pi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C1CD4959DD0FB18C222D543 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96D067EC32FD3321FB87BF1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-piUITests/Pods-daikin-lirc-piUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3189789BF8354FAB920A023 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daikin-lirc-piTests/Pods-daikin-lirc-piTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4591E8CD1F3F7002008D1BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4591E8D71F3F7002008D1BB5 /* ViewController.swift in Sources */,
+				4591E9091F3F7E1C008D1BB5 /* DaikinModel.swift in Sources */,
+				4591E9041F3F7C65008D1BB5 /* API.swift in Sources */,
 				4591E8D51F3F7002008D1BB5 /* AppDelegate.swift in Sources */,
+				4591E90B1F3F7F4B008D1BB5 /* ResponseModel.swift in Sources */,
+				4591E9061F3F7DCC008D1BB5 /* DaikinService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +634,7 @@
 		};
 		4591E8FA1F3F7002008D1BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDC4E1AFA592267B0E8F1DB /* Pods-daikin-lirc-pi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EJ4KJWT3MT;
@@ -428,6 +648,7 @@
 		};
 		4591E8FB1F3F7002008D1BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F6C94D8CC5D447BC5AE2A9 /* Pods-daikin-lirc-pi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EJ4KJWT3MT;
@@ -441,6 +662,7 @@
 		};
 		4591E8FD1F3F7002008D1BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE701A8A1DECC3F08BB6E698 /* Pods-daikin-lirc-piTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +678,7 @@
 		};
 		4591E8FE1F3F7002008D1BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF02899AD2D307453B9EA3F /* Pods-daikin-lirc-piTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +694,7 @@
 		};
 		4591E9001F3F7002008D1BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 213E1290DAD4DDD3F1D3D1A2 /* Pods-daikin-lirc-piUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EJ4KJWT3MT;
@@ -485,6 +709,7 @@
 		};
 		4591E9011F3F7002008D1BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699076C93EB8407CCA1EC3BB /* Pods-daikin-lirc-piUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EJ4KJWT3MT;
@@ -516,6 +741,7 @@
 				4591E8FB1F3F7002008D1BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4591E8FC1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +750,7 @@
 				4591E8FE1F3F7002008D1BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4591E8FF1F3F7002008D1BB5 /* Build configuration list for PBXNativeTarget "daikin-lirc-piUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +759,7 @@
 				4591E9011F3F7002008D1BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
