@@ -11,8 +11,8 @@ import MTCircularSlider
 import Intents
 
 class ViewController: UIViewController {
-    @IBOutlet weak var SwitchPower: UISwitch!
 
+    @IBOutlet weak var btnPowerOff: UIButton!
     @IBOutlet weak var SwitchPowerful: UISwitch!
     @IBOutlet weak var SwitchSwing: UISwitch!
     @IBOutlet weak var LblFanValue: UILabel!
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        btnPowerOff.isHidden = true
+        
         INPreferences.requestSiriAuthorization { (status) in
             
         }
@@ -42,33 +44,26 @@ class ViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appDidBecomeActive), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
-        
-            }
     
     func appDidBecomeActive() {
         if (AppDelegate.intentStart == nil) {
             return
         } else if (AppDelegate.intentStart == true) {
-            SwitchPower.setOn(true, animated: true)
-            SwitchPowerValueChanged(SwitchPower);
+            powerValueChanged(isOn: true)
             AppDelegate.intentStart = nil
         } else {
-            SwitchPower.setOn(false, animated: true)
-            SwitchPowerValueChanged(SwitchPower);
+            powerValueChanged(isOn: false)
             AppDelegate.intentStart = nil
         }
 
     }
     
-    @IBAction func SwitchPowerValueChanged(_ sender: Any) {
-        _daikinModel.state = SwitchPower.isOn
+    func powerValueChanged(isOn : Bool) {
+        _daikinModel.state = isOn
         updateRemoteStates()
         UIView.animate(withDuration: 1, animations: {
-            self.ViewHidePanel.alpha = self.SwitchPower.isOn ? 0 : 1
-            self.ViewHidePanel.isHidden  = self.SwitchPower.isOn
+            self.ViewHidePanel.alpha = isOn ? 0 : 1
+            self.ViewHidePanel.isHidden  = isOn
         })
     }
     @IBAction func SegmentModeValueChanged(_ sender: Any) {
@@ -184,6 +179,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnPowerOnClick(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.btnPowerOff.alpha = 1
+            self.btnPowerOff.isHidden = false
+        })
+        powerValueChanged(isOn: true);
+    }
+    @IBAction func btnPowerOffClick(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.btnPowerOff.alpha = 0
+            self.btnPowerOff.isHidden = true
+        })
+        powerValueChanged(isOn: false);
+    }
 
 }
 
