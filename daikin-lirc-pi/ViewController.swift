@@ -9,25 +9,30 @@
 import UIKit
 import MTCircularSlider
 import Intents
+import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segmentFan: UISegmentedControl!
     @IBOutlet weak var btnPowerOff: UIButton!
     @IBOutlet weak var SwitchPowerful: UISwitch!
     @IBOutlet weak var SwitchSwing: UISwitch!
     @IBOutlet weak var LblFanValue: UILabel!
-    @IBOutlet weak var SliderFan: UISlider!
     @IBOutlet weak var LblTemperatureValue: UILabel!
 
     @IBOutlet weak var SegmentMode: UISegmentedControl!
     
     @IBOutlet weak var CircularSliderTemp: MTCircularSlider!
     @IBOutlet weak var ViewHidePanel: UIView!
-    var _daikinModel : DaikinModel!
+    var _daikinModel = DaikinModel()
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        ref = Database.database().reference()
         
         btnPowerOff.isHidden = true
         
@@ -36,125 +41,112 @@ class ViewController: UIViewController {
         }
         
         INVocabulary.shared().setVocabularyStrings(["push up", "sit up", "pull up"], of: .workoutActivityName)
-
         
-        _daikinModel = initStates()        
-        SliderFan.isContinuous = false;
+//        ref.child("last_event").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            let value = snapshot.value as? [String : Any]
+//            self._daikinModel = self.initModelFromJson(json: value)
+//            self.firstTimePopulateUI(model: self._daikinModel)            
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+        
+        
         
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appDidBecomeActive), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // for real time update
+        ref.child("last_event").observe(DataEventType.value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? [String : Any]
+            self._daikinModel = self.initModelFromJson(json: value)
+            self.firstTimePopulateUI(model: self._daikinModel)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     func appDidBecomeActive() {
         if (AppDelegate.intentStart == nil) {
             return
         } else if (AppDelegate.intentStart == true) {
-            powerValueChanged(isOn: true)
+            btnPowerOnClick(btnPowerOff)
             AppDelegate.intentStart = nil
         } else {
             powerValueChanged(isOn: false)
+            sendRemoteStates()
             AppDelegate.intentStart = nil
         }
 
     }
     
+    func firstTimePopulateUI(model: DaikinModel) {
+        powerValueChanged(isOn: model.toPowerStateBool())
+        SegmentMode.selectedSegmentIndex = model.toModeIndex()
+        CircularSliderTemp.value = Float(model.temperature)
+        updateLableTemperature(temperature: model.temperature)
+        segmentFan.selectedSegmentIndex = model.toFanIndex()
+        SwitchSwing.setOn(model.toSwingBool(), animated: false)
+        SwitchPowerful.setOn(model.toPowerfulBool(), animated: false)
+    }
+    
     func powerValueChanged(isOn : Bool) {
-        _daikinModel.state = isOn
-        updateRemoteStates()
+        _daikinModel.state = _daikinModel.toPowerStateString(isOn: isOn)
         UIView.animate(withDuration: 1, animations: {
             self.ViewHidePanel.alpha = isOn ? 0 : 1
             self.ViewHidePanel.isHidden  = isOn
+            
+            self.btnPowerOff.alpha = isOn ? 1 : 0;
+            self.btnPowerOff.isHidden = !isOn
         })
     }
+    
     @IBAction func SegmentModeValueChanged(_ sender: Any) {
         let index = SegmentMode.selectedSegmentIndex
-        var mode = "cool"
-        switch index {
-        case 0:
-            mode = "dry"
-            break
-        case 1:
-            mode = "cool"
-            break
-        case 2:
-            mode = "fan"
-        default:
-            break
-        }
+        let mode = _daikinModel.toModeString(index: index)
         
         _daikinModel.mode = mode
-        updateRemoteStates()
+        sendRemoteStates()
     }
     @IBAction func SwitchSwingValueChanged(_ sender: Any) {
         _daikinModel.swing = SwitchSwing.isOn ? "on" : "off";
-        updateRemoteStates()
+        sendRemoteStates()
     }
     @IBAction func SliderFanValueChanged(_ sender: Any) {
-        let value = Int(SliderFan.value)
-        if (value == _daikinModel.getFanIndex()) {
-            return
-        }
-        
-        var fan = "fan1"
-        var displayValue = "Level 1"
-        switch value {
-        case 1:
-            fan = "fan1"
-            displayValue = "Level 1"
-            break
-        case 2:
-            fan = "fan2"
-            displayValue = "Level 2"
-            break
-        case 3:
-            fan = "fan3"
-            displayValue = "Level 3"
-            break
-        case 4:
-            fan = "fan4"
-            displayValue = "Level 4"
-            break
-        case 5:
-            fan = "fan5"
-            displayValue = "Level 5"
-            break
-        case 6:
-            fan = "auto"
-            displayValue = "Auto"
-            break
-        case 7:
-            fan = "moon-tree"
-            displayValue = "Moon Tree"
-            break
-        default:
-            break
-        }
-        
-        LblFanValue.text = displayValue
-        _daikinModel.fan = fan
-        updateRemoteStates()
         
     }
     
     @IBAction func SwitchPowerfulValueChanged(_ sender: Any) {
-        _daikinModel.powerful = SwitchPowerful.isOn
-        updateRemoteStates()
+        _daikinModel.powerful = _daikinModel.toPowerfulString(isOn: SwitchPowerful.isOn)
+        sendRemoteStates()
     }
     
-    func initStates() -> DaikinModel {
-        let daikinModel = DaikinModel(state: false, mode: "cool", temperature: 22, fan: "fan1", swing: "on", powerful: false);
-        
-        return daikinModel;
-    }
-    
-    func updateRemoteStates(){
-        DaikinService.UpdateStates(state: _daikinModel) { response in
-            if (response.error != nil) {
-                print(response.description)
-            } else {
-                print(response.isSuccess)
-            }
+    func initModelFromJson(json: [String: Any]?) -> DaikinModel {
+        if (json != nil) {
+            let model = DaikinModel(json: json)
+            return model
         }
+        
+        // return default
+        return DaikinModel();
+    }
+    
+    func sendRemoteStates(){
+        let json = _daikinModel.toJson()
+        print(json)
+        let childUpdate = ["last_event" : json]
+        print(childUpdate)
+        self.ref.updateChildValues(childUpdate)
     }
     
     
@@ -168,30 +160,35 @@ class ViewController: UIViewController {
         }
 
         _daikinModel.temperature = temperature
+        updateLableTemperature(temperature: temperature)
         
-//        updateRemoteStates()
-        LblTemperatureValue.text = "\(temperature) °C"
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.updateRemoteStates), object: nil)
-        self.perform(#selector(self.updateRemoteStates), with: nil, afterDelay: 0.5)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.sendRemoteStates), object: nil)
+        self.perform(#selector(self.sendRemoteStates), with: nil, afterDelay: 0.5)
     }
+    
+    func updateLableTemperature(temperature: Int) {
+        LblTemperatureValue.text = "\(temperature) °C"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func segmentFanValueChanged(_ sender: Any) {
+        let value = Int(segmentFan.selectedSegmentIndex)
+        let fan = _daikinModel.toFanString(index: value)
+        _daikinModel.fan = fan
+        sendRemoteStates()
+    }
+    
     @IBAction func btnPowerOnClick(_ sender: Any) {
-        UIView.animate(withDuration: 1, animations: {
-            self.btnPowerOff.alpha = 1
-            self.btnPowerOff.isHidden = false
-        })
         powerValueChanged(isOn: true);
+        sendRemoteStates()
     }
     @IBAction func btnPowerOffClick(_ sender: Any) {
-        UIView.animate(withDuration: 1, animations: {
-            self.btnPowerOff.alpha = 0
-            self.btnPowerOff.isHidden = true
-        })
         powerValueChanged(isOn: false);
+        sendRemoteStates()
     }
 
 }

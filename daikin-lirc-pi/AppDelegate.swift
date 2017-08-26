@@ -8,6 +8,8 @@
 
 import UIKit
 import Intents
+import Firebase
+import Bugsnag
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Bugsnag.start(withApiKey: "8b423d692f6d54c0e5378802092be4f5")        
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        
         return true
     }
 

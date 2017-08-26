@@ -9,6 +9,9 @@ target 'daikin-lirc-pi' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod "MTCircularSlider"
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Bugsnag'
 
   target 'daikin-lirc-piTests' do
     inherit! :search_paths
