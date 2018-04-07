@@ -11,7 +11,7 @@ import MTCircularSlider
 import Intents
 import Firebase
 
-class ViewController: UIViewController {
+class AirconViewController: UIViewController {
 
     @IBOutlet weak var segmentFan: UISegmentedControl!
     @IBOutlet weak var btnPowerOff: UIButton!

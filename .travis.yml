@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode9.2
+xcode_project: daikin-lirc-pi.xcodeproj
+xcode_scheme: daikin-lirc-pi
+xcode_sdk: iphonesimulator10.3.1

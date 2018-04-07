@@ -10,12 +10,14 @@ import UIKit
 import Intents
 import Firebase
 import Bugsnag
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     static var intentStart: Bool? = nil
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,6 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+            print("Granted: \(granted)")
+            print("error: \(String(describing: error))")
+        }
         
         return true
     }
@@ -69,6 +81,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func handleEvent(forRegion region: CLRegion!, didEnter: Bool) {
+        let body = didEnter ? "You are reaching home" : "You are leaving home"
+        // Show an alert if application is active
+//        if UIApplication.shared.applicationState == .active {
+//            let message = body
+//            window?.rootViewController?.showAlert(withTitle: nil, message: message)
+//            return
+//        }
+        
+            let content = UNMutableNotificationContent()
+            content.title = NSString.localizedUserNotificationString(forKey: "Smart Room", arguments: nil)
+            content.body = NSString.localizedUserNotificationString(forKey: body, arguments: nil)
+            content.sound = UNNotificationSound.default()
+            content.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber;
+            content.categoryIdentifier = "com.am.siri.test"
+            
+            let trigger2 = UNLocationNotificationTrigger.init(region: region, repeats: false)
+            
+            let request = UNNotificationRequest.init(identifier: "SmartRoom", content: content, trigger: trigger2)
+            
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            
+            // Schedule the notification.
+            let center = UNUserNotificationCenter.current()
+            center.add(request)
+        
+    }
+        
+}
 
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
+        if region is CLCircularRegion {
+            print("enter \(region.notifyOnEntry), \(region.notifyOnExit)")
+            handleEvent(forRegion: region, didEnter: true)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            print("exit \(region.notifyOnEntry), \(region.notifyOnExit)")
+            handleEvent(forRegion: region, didEnter: false)
+        }
+    }
 }
 

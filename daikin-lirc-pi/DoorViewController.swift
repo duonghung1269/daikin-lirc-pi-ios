@@ -58,12 +58,10 @@ class DoorViewController: UIViewController {
             let image = UIImage(named: "DoorLock") as UIImage?
             btnDoorState.setImage(image, for: .normal)
             lblMessage.text = "Tap to UNLOCK!";
-//            lblCurrentState.text = "Door Locked!"
         } else {
             let image = UIImage(named: "DoorUnlock") as UIImage?
             btnDoorState.setImage(image, for: .normal)
             lblMessage.text = "Tap to LOCK!";
-//            lblCurrentState.text = "Door Unlocked!"
         }
     }
     
