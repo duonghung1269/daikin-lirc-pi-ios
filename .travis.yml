@@ -1,3 +1,3 @@
 language: objective-c
 osx_image: xcode8.3
-script: - xcodebuild clean test -project daikin-lirc-pi.xcworkspace -scheme daikin-lirc-pi -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+script: - xcodebuild clean test -sdk iphonesimulator -project daikin-lirc-pi.xcworkspace -scheme daikin-lirc-pi CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
