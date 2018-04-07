@@ -1,5 +1,7 @@
 language: objective-c
 osx_image: xcode9.2
-xcode_project: daikin-lirc-pi.xcworkspace
-xcode_scheme: daikin-lirc-pi
-xcode_sdk: iphonesimulator10.3.1
+# xcode_project: daikin-lirc-pi.xcworkspace
+# xcode_scheme: daikin-lirc-pi
+# xcode_sdk: iphonesimulator10.3.1
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace daikin-lirc-pi.xcworkspace -scheme daikin-lirc-pi CODE_SIGNING_REQUIRED=NO
